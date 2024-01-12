@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{% static 'styles/cadastro.css' %}">
+</head>
+<body>
+    <div class="cadastro-container">
+        <h2>Cadastro</h2>
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <form method="post" action="{% url 'cadastro' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Cadastrar</button>
+        </form>
+        <a href="{% url 'login' %}">Já tem uma conta? Entre aqui</a>
+    </div>
+</body>
+</html>

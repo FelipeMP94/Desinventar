@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Desastres em Escolas</title>
+    <link rel="stylesheet"  href="{% static 'styles/registros_desastres.css' %}">
+</head>
+{% block content %}
+<body>
+    <div class="navigation-buttons">
+        <a href="{% url 'login' %}" class="btn">Login</a>
+        <a href="{% url 'cadastro' %}" class="btn">Cadastro</a>
+    </div>
+    <h2>Registro de Desastres em Escolas</h2>
+
+    <div>
+        <h3>Lista de Desastres Registrados</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Data</th>
+                    <th>Localização</th>
+                    <th>Escola Afetada</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                {% if ListDesastres %}
+                {% for desastre in ListDesastres %}
+                    <tr>
+                        <td>{{ desastre.tipo }}</td>
+                        <td>{{ desastre.data }}</td>
+                        <td>{{ desastre.localizacao }}</td>
+                        <td>{{ desastre.escola }}</td>
+                    </tr>
+                {% endfor %}
+                {% else %}
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+</body>
+</html>

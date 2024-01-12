@@ -8,4 +8,4 @@ from consulta.models import Registros_desastres
 def registros_desastres(request):
 
     desastres = Registros_desastres.objects.all()
-    return render(request,'registros_desastres.html',{'ListDesastres':desastres})
+    return render(request,'consulta/registros_desastres.html',{'ListDesastres':desastres})
