@@ -13,6 +13,7 @@ def login(request):
         if form.is_valid():
             nome = form['nome_login'].value()
             senha = form['senha_login'].value()
+            
         usuario = auth.authenticate(
             request,
             username=nome,

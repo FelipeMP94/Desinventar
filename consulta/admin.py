@@ -7,6 +7,7 @@ from consulta.models import Registros_desastres
 class ListandoDesastres(admin.ModelAdmin):
     list_display = ('id','escola','tipo','publicado')
     list_display_links = ('id','escola')
+    list_filter = ('publicado',)
 
 
 

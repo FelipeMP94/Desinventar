@@ -10,7 +10,7 @@ from django.contrib import auth,messages
 
 def registros_desastres(request):
 
-    desastres = Registros_desastres.objects.all()
+    desastres = Registros_desastres.objects.filter(publicado=True)
     return render(request,'consulta/registros_desastres.html',{'ListDesastres':desastres})
 
 
