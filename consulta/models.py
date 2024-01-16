@@ -7,5 +7,11 @@ class Registros_desastres(models.Model):
     data = models.CharField(max_length= 100,null=False,blank=False)
     localizacao = models.CharField(max_length= 100,null=False,blank=False)
     escola = models.CharField(max_length= 100,null=False,blank=False)
+    publicado = models.BooleanField(default=False)
+
+
+
+
+
 
 

@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="{% static 'styles/forms_alimentacao.css' %}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Formulário</h2>
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <form method="post" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html
