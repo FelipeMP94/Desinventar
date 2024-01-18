@@ -10,6 +10,10 @@
 <body>
     <div class="user-box" style="position: fixed; top: 10px; left: 10px; background-color: #f0f0f0;">
         Usuário logado: {{ request.user.username }}
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
     </div>
     <div class="form-container">
         <h2>Formulário</h2>

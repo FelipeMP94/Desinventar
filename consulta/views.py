@@ -16,6 +16,13 @@ def registros_desastres(request):
 
 
 
+def logout(request):
+    auth.logout(request)
+    messages.success(request,'Logout efetuado com sucesso')
+    return redirect('login')
+
+
+
 def alimentando_dados(request):
     if request.user.is_authenticated:
         form = formulario_alimentacao()
@@ -38,3 +45,6 @@ def alimentando_dados(request):
 
 
         return render(request,'alimentacao/formulario_alimentacao.html',{'form':form})
+    else:
+        return redirect('login')
+        messages.error(request,'Faça o login')
