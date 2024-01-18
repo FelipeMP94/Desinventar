@@ -13,8 +13,7 @@ body {
     margin: 0;
 
 }
-
-.user-box {
+.user_box {
     position: fixed;
     top: 10px;
     left: 10px;
@@ -25,7 +24,6 @@ body {
     z-index: 1000; 
     font-size: 0.9em;
 }
-
 
 
 .form-container {
@@ -78,8 +76,6 @@ body {
     background-color: #0056b3;
 }
 
-
-
 .messages div.error {
     color: #ff0000;
     background-color: #ffecec;
@@ -97,7 +93,4 @@ body {
     padding: 10px;
     border-radius: 5px;
 }
-
-
-
 

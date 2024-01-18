@@ -1,8 +1,3 @@
-
-
-
-
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -11,50 +6,34 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-
 }
 
-.user-box {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background-color: #f0f0f0;
-    padding: 8px;
-    border-radius: 4px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000; 
-    font-size: 0.9em;
-}
-
-
-
-.form-container {
+.cadastro-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 400px;
+    width: 300px; /* Define uma largura fixa para o container */
 }
 
-.form-container h2 {
-    margin-bottom: 20px;
+.cadastro-container h2 {
+    margin: 0 0 20px;
 }
 
-.form-container form {
+.cadastro-container form {
     margin-bottom: 15px;
 }
 
-.form-container label {
+.cadastro-container label {
     display: block;
     text-align: left;
     margin-top: 10px;
 }
 
-.form-container input[type="text"],
-.form-container input[type="password"],
-.form-container input[type="email"],
-.form-container select {
+.cadastro-container input[type="text"],
+.cadastro-container input[type="password"],
+.cadastro-container input[type="email"] {
     width: 90%;
     padding: 8px;
     margin-top: 5px;
@@ -63,7 +42,7 @@ body {
     border-radius: 4px;
 }
 
-.form-container button {
+.cadastro-container button {
     background-color: #007bff;
     color: #fff;
     padding: 10px 15px;
@@ -74,15 +53,20 @@ body {
     width: 100%;
 }
 
-.form-container button:hover {
+.cadastro-container button:hover {
     background-color: #0056b3;
 }
 
-
+.cadastro-container a {
+    display: block;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+}
 
 .messages div.error {
-    color: #ff0000;
-    background-color: #ffecec;
+    color: #ff0000; /* Cor do texto para erro */
+    background-color: #ffecec; /* Cor de fundo para erro */
     border: 1px solid #ff0000;
     margin-bottom: 15px;
     padding: 10px;
@@ -90,14 +74,10 @@ body {
 }
 
 .messages div.success {
-    color: #008000;
-    background-color: #ecffec;
+    color: #008000; /* Cor do texto para sucesso */
+    background-color: #ecffec; /* Cor de fundo para sucesso */
     border: 1px solid #008000;
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 5px;
 }
-
-
-
-
